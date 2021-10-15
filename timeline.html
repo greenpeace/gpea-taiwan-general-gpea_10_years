@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <title>Horizontal Scrollable Timeline Example</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="jtimeline.css" />
+
+    <style>
+        html,* { font-family: 'Inter'; }
+        body { background-color: #fafafa; line-height:1.6;}
+        .lead { font-size: 1.5rem; font-weight: 300; }
+        .container { margin: 150px auto; max-width: 960px; }
+        h1 { font-size: 3rem; }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+    <script src="jtimeline.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#jtimeline-demo').jTimeline();
+        });
+    </script>
+</head>
+<body><div id="jquery-script-menu">
+    <div class="jquery-script-center">
+        <ul>
+            <li><a href="https://www.jqueryscript.net/time-clock/horizontal-scrollable-timeline.html">Download This Plugin</a></li>
+            <li><a href="https://www.jqueryscript.net/">Back To jQueryScript.Net</a></li>
+        </ul><div id="carbon-block"></div>
+        <div class="jquery-script-ads"><script type="text/javascript"><!--
+        google_ad_client = "ca-pub-2783044520727903";
+        /* jQuery_demo */
+        google_ad_slot = "2780937993";
+        google_ad_width = 728;
+        google_ad_height = 90;
+        //-->
+        </script>
+            <script type="text/javascript"
+                    src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+            </script></div>
+        <div class="jquery-script-clear"></div>
+    </div>
+</div>
+<div class="container">
+    <h1>Horizontal Scrollable Timeline Example</h1>
+    <p class="lead">A tiny, responsive, SEO-friendly jQuery timeline plugin that generates a horizontal scrollable timeline from an HTML unordered list.</p>
+    <div id="jtimeline-demo" class="jtimeline">
+        <ul class="jtimeline-events">
+            <li class="jtimeline-event" data-timestamp="1591416000">
+                June 6th 2020<br />
+                Birthday
+            </li>
+
+            <li class="jtimeline-event" data-timestamp="1609477200">
+                January 1st 2021<br />
+                New Year
+            </li>
+
+            <li class="jtimeline-event is-active" data-timestamp="1610514000">
+                January 13th 2021<br />
+                Launch of jTimeline
+            </li>
+
+            <li class="jtimeline-event" data-timestamp="1613278800">
+                February 14th 2021<br />
+                Valentine's Day
+            </li>
+        </ul>
+    </div>
+</div>
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36251023-1']);
+    _gaq.push(['_setDomainName', 'jqueryscript.net']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+<script>
+    try {
+        fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
+            return true;
+        }).catch(function(e) {
+            var carbonScript = document.createElement("script");
+            carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
+            carbonScript.id = "_carbonads_js";
+            document.getElementById("carbon-block").appendChild(carbonScript);
+        });
+    } catch (error) {
+        console.log(error);
+    }
+</script>
+</body>
+</html>

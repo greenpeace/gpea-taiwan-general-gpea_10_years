@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    img {
+      /* 因為圖片不能影響頁面其他的布局，所以用絕對定位 */
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+<img src="https://img.uj5u.com/2020/10/10/136722102306421.png" alt="">
+<script>
+  var pic = document.querySelector('img');
+  document.addEventListener('mousemove', function(e) {
+    // 獲取當前滑鼠到頁面的距離
+    var x = e.pageX;
+    var y = e.pageY;
+    // 選用圖片大小為50*50像素，讓滑鼠居中在它中間，x左移25px，y上移25px
+    pic.style.left = x - 25 + 'px';
+    pic.style.top = y - 25 + 'px';
+  });
+</script>
+</body>
+
+</html>

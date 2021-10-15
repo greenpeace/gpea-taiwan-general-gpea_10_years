@@ -1,0 +1,1185 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&family=Roboto:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Aleo");
+
+html {
+    position: relative;
+    width: 100%; 
+    max-width: 100%;
+    max-height: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+body {
+    max-width: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    color: white;
+    font-family:"Roboto", "Noto Sans TC", "微軟正黑體", "Microsoft JhengHei", "儷黑 Pro", "LiHei Pro", Arial, Helvetica, sans-serif;
+}
+
+a {
+    display: block;
+    color: white;
+}
+
+.j_bgIMG {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.RRwrap {
+    position: relative;
+    width: 100%;
+}
+
+.RR_inner {
+    width: 90%; max-width: 1280px; 
+    margin: auto;
+}
+
+
+header {
+	position: fixed;
+	z-index: 50;
+	left: 0; top: 0;
+	width: 100%; height: 80px;
+	transition: all .4s ease-in-out;
+}
+
+header::after {
+	content: '';
+	position: absolute;
+	z-index: 1;
+	left: 0; top: 0;
+	width: 100%; height: 80px;
+	/* background-image: linear-gradient(135deg,  rgba(23, 38, 122, 1) 0%,rgba(22, 25, 60, 1) 100%);  */
+    background-color: #000;
+	/* opacity: 0; */
+	transition: all .4s ease-in-out;
+}
+
+header .RRheaderlogo {
+	width: 209px; height: 32px;
+	background-image: url(../images/logo@2x.png);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center;
+}
+
+header .RRheaderlogo {
+	position: absolute;
+	z-index: 52;
+	left: 40px; top: 0; bottom: 0;
+	margin: auto 0;
+}
+
+header .menu {
+	position: absolute;
+	z-index: 50;
+	top: 0; right: 40px;
+	width: 606px; height: 80px;
+	transition: all .4s ease-in-out;
+}
+
+header .menu ul {
+	display: flex;
+	flex-wrap: wrap;
+    align-items: center;
+}
+
+header .menu ul li {
+	margin: 0 40px 0 0 ;
+    transition: all .3s ease;
+}
+
+header .menu ul li:last-child {
+	margin: 0 0 0 0;
+}
+
+header .menu a {
+	display: block;
+	height: auto;
+	padding-top: 27.5px;
+	padding-bottom: 27.5px;
+	color: #fff;
+	transition: all .3s ease;
+}
+
+header .menu li:last-child {
+    height: 42px;
+    padding: 7px 16px;
+    border: 2px solid white;
+    border-radius: 21px;
+}
+header .menu li:last-child:hover a {
+    color: black;
+}
+
+header .menu li:last-child:hover  {
+    background-color: white;
+    opacity: 1;
+    color: black;
+}
+
+header .menu li:last-child a {
+    padding: 0 0;
+}
+
+header .menu a:hover,
+header .menu ul li.--active a {
+	opacity: .85;
+}
+
+
+
+.isMobile .hamber {
+	position: absolute;
+	top: 0; right: 0;
+	z-index: 52;
+	width: 60px; height: 60px;
+	/* background-color: red; */
+	cursor: pointer;
+}
+.isMobile .hamber .in {
+	position: absolute;
+	left: 0; right: 0; top: 0; bottom: 0;
+	margin: auto;
+	width: 30px; height: 8px;
+	overflow: hidden;
+}
+
+.isMobile .hamber .in span {
+	position: absolute;
+	right: 0;
+	width: 100%; height: 2px;
+	background-color: white;
+}
+.isMobile .hamber .in span:first-child {
+	top: 0;
+	transform: translateX(0) translateY(0) rotate(0);
+	transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.isMobile .hamber .in span:last-child {
+	bottom: 0;
+	transform: translateX(50%) translateY(0) rotate(0);
+	transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.isMenuOpen.isMobile .hamber .in {
+	overflow: visible;
+}
+.isMenuOpen.isMobile .hamber .in span:first-child {
+	transform: translateX(0) translateY(2px) rotate(-45deg);
+	transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.isMenuOpen.isMobile .hamber .in span:last-child {
+	transform: translateX(0) translateY(-4px) rotate(45deg);
+	transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hamber:hover .in span:last-child {
+	transform: translateX(0) translateY(0) rotate(0);
+	transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.isMobile .RREffectlight {
+    display: none;
+}
+
+.RREffectlight .RREffectlight__ddwon {
+    position: fixed;
+    z-index: 59;
+    left: 0; right: 0; bottom: 20px;
+    margin: 0 auto;
+    width: 50px; height: 50px;
+    transform: rotate(180deg);
+}
+
+
+.RREffectlight .RREffectlight__startbg {
+    position: fixed;
+    z-index: 59;
+    left: 0; top: 0;
+    width: 100%; height: 100vh;
+    background-color: #000;
+}
+
+.RREffectlight .RREffectlight__dark {
+    position: fixed;
+    z-index: 58;
+    left: 0; top: 0;
+    width: 100%; height: 100vh;
+    mix-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, .99);
+    /* background-color: black; */
+}
+.RREffectlight .RREffectlight__mouse {
+    position: fixed;
+    z-index: 57;
+    width: 200px; height: 200px;
+    border-radius: 50%;
+    background-color: white;
+    transition: all .2s ease;
+    /* mix-blend-mode: difference; */
+}
+
+.isScale.RREffectlight .RREffectlight__mouse {
+    
+}
+
+
+.RREffectlight .time {
+    color: #ffffff; 
+    text-transform: uppercase; 
+    display: flex; 
+    justify-content: center;
+    /* margin-top: 200px; */
+    margin-top: 25%;
+    pointer-events: none;
+}
+.RREffectlight .time .numm {
+    position: relative;
+}
+
+.RREffectlight .time span:last-child .numm::after {
+    display: none;
+}
+
+.RREffectlight .time .numm:after {
+    content: ':';
+    position: absolute;
+    top: 0; bottom: 0; 
+    margin: auto 0;
+    font-size: 3rem;
+    transform: translateX(1.5rem) translateX(.1rem); 
+}
+
+.RREffectlight .time span {
+    padding: 0 2rem; 
+    font-size: 1.2rem;
+    pointer-events: none;
+    /* font-family:"Aleo", "Noto Sans TC", "微軟正黑體", "Microsoft JhengHei", "儷黑 Pro", "LiHei Pro", Arial, Helvetica, sans-serif; */
+}
+
+.RREffectlight .time span div { 
+    font-size: 5rem;
+    pointer-events: none;
+    /* font-family:"Aleo", "Noto Sans TC", "微軟正黑體", "Microsoft JhengHei", "儷黑 Pro", "LiHei Pro", Arial, Helvetica, sans-serif; */
+}
+
+.RREffectlight .time .tt {
+    padding-top: 30px;
+    text-align: center;
+    font-size: .5rem;
+    pointer-events: none;
+}
+
+
+.isScroll .RREffectlight .RREffectlight__dark {
+    
+}
+
+
+/* 新手寫文字 */
+.drawtxt {
+    width: 100%; 
+    max-width: 800px;
+    margin-bottom: 80px;
+}
+.drawtxt  img {
+    width: 100%;
+}
+
+.drawtxt  .txt {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+
+/* 主視覺重置 */
+
+.RRmainvision {
+    position: relative;
+    width: 100%; height: 100vh;
+}
+
+.RRmainvision__gottop {
+    position: fixed;
+    z-index: 1;
+    right: 30px; bottom: 20px;
+    width: 50px; height: 50px;
+    border: 1px solid white;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.RRmainvision__gottop:hover {
+    opacity: .8;
+}
+
+.RRmainvision__img {
+    width: 100%; height: 100vh;
+    opacity: .5;
+}
+
+.isSafari.bgopfull .RRmainvision__img {
+    opacity: 1;
+}
+
+.mobile .isSafari.bgopfull .RRmainvision::after {
+    display: none;
+}
+.isSafari.bgopfull .RRmainvision::after {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    z-index: 1;
+    width: 100%; height: 100vh;
+    background-color: rgba(255, 255, 255, .3);
+}
+
+.RRmainvision .__pngtxt {
+    position: absolute;
+    z-index: 1;
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+    width: 900px; height: 360px;
+    transform: translateY(50px);
+}
+
+.RRmainvision .__pngtxt .img {
+    margin-bottom: 30px;
+}
+
+.RRmainvision .__pngtxt .img .sub,
+.RRmainvision .__pngtxt .txt .tt {
+    margin-bottom: 14px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.RRmainvision .__pngtxt .img .imgtxt img {
+    width: 100%;
+}
+
+.RRmainvision .__pngtxt .txt {
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.RRmainvision .__pngtxt .txt .tg {
+    text-align: center;
+    font-size: 14px;
+}
+
+.RRmainvision .__pngtxt .txt .gogo {
+    width: 110px;
+    margin: 20px auto 0 auto;
+    padding: 5px 14px;
+    text-align: center;
+    font-size: 16px;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+.RRmainvision .__pngtxt .txt .gogo:hover {
+    background-color: white;
+    color: #000;
+}
+
+.RRVideo {
+    margin: 100px auto;
+}
+
+.RRVideo video {
+    width: 100%; 
+    height: auto;
+    margin: auto;
+}
+
+.RRkol {
+    position: relative;
+    margin-bottom: 200px;
+}
+.RRkol::before {
+    content: '';
+    position: absolute;
+    right: 0; top: -300px;
+    z-index: -1;
+    width: calc(943px*.4); height: calc(1222px*.4);
+    background-image: url(../images/bg01.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: .6;
+}
+.RRkol::after {
+    content: '';
+    position: absolute;
+    left: -200px; bottom: -500px;
+    z-index: -1;
+    width: calc(588px*.85); height: calc(776px*.85);
+    background-image: url(../images/bg02.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: .6;
+}
+
+
+.RRkol .pngtt {
+    width: 590px;
+    margin-bottom: 80px;
+}
+.RRkol .pngtt img {
+    width: 100%;
+}
+
+.RRkol .kols {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+
+.RRkol .kols .itm {
+    width: calc((100% - 200px)/3);
+}
+.RRkol .kols .itm:nth-child(2) {
+    transform: translateY(50px);
+}
+.RRkol .kols .itm:nth-child(3) {
+    transform: translateY(100px);
+}
+.RRkol .kols .itm img {
+    width: 100%; 
+    margin-bottom: 20px;
+}
+
+.RRkol .kols .itm .txt .tt {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.RRkol .kols .itm .txt .tg {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.RRsteup .cont  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+}
+
+.RRsteup .cont .img,
+.RRsteup .cont .txt {
+    width: calc(50% - 20px);
+}
+
+.RRsteup .cont .txt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.RRsteup .cont .txt .bx {
+    max-width: 300px;
+}
+
+.RRsteup .cont .img img {
+    width: 100%;
+}
+
+.RRsteup .cont .txt .tt { 
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.RRsteup .cont .txt .tg p {
+    margin-bottom: 10px;
+} 
+
+.RRsteup .cont .txt .gogoget {
+
+}
+
+.RRsteup .cont .txt .gogoget  {
+    display: inline-block;
+    margin: 30px 0 0 0;
+    padding: 5px 14px;
+    text-align: center;
+    font-size: 16px;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+.RRsteup .cont .txt .gogoget:hover {
+    background-color: white;
+    color: #000;
+}
+
+
+.RRTime {
+    width: 100%; height: auto;
+    padding: 120px 0;
+}
+
+.RRTime .pngtt {
+    width: 820px;
+}
+
+.RRTime .pngtt img {
+    width: 100%;
+}
+
+.RRTime .timeslider {
+    width: 580px; 
+    margin: 80px auto 0 auto;
+}
+
+.RRTime .timeslider .slick-prev, 
+.RRTime .timeslider .slick-next {
+    width: 30px; height: 30px;
+    /* border-radius: 50%;
+    border: 2px solid white; */
+}
+
+.RRTime .timeslider .slick-prev {
+    left: 0;
+}
+.RRTime .timeslider .slick-next {
+    right: 0;
+}
+
+.RRTime .timeslider .slick-prev:before,
+.RRTime .timeslider .slick-next:before  {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    margin: auto;
+    width: 30px; height: 30px;
+    background-color: transparent;
+    background-image: url(../images/arrow.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.RRTime .timeslider .slick-next:before {
+    transform: scale(-1);
+}
+
+.RRTime .timeslider .itm {
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, .55);
+    backdrop-filter: blur(12px) ;
+    border-radius: 20px;
+    color: #000;
+}
+
+.RRTime .timeslider .itm .tt {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.RRTime .timeslider .itm .tg {
+    
+    font-size: 16px;
+}
+.RRTime .js__timeslider .slick-dots {
+    opacity: 0;
+    pointer-events: none;
+}
+.RRTime .js__timeslider .slick-dots li button::before {
+    content: '';
+    width: 16px; height: 16px; 
+    border: 4px solid white;
+    border-radius: 50%;
+}
+
+.RRTime .RR_timelineee {
+    position: relative;
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+    width: 100%;  
+}
+.RRTime .RR_timelineee::after {
+    content: '';
+    position: absolute;
+    left: 0; bottom: 50px;
+    width: 100%; height: 2px;
+    background-color: white;
+
+}
+
+.RRTime .RR_timelineee .itm {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100px;
+    /* width: 60px; height: 60px; */
+    margin: 0 0;
+    text-align: center;
+    cursor: pointer;
+}
+.RRTime .RR_timelineee .itm::before {
+    content: '';
+    position: absolute;
+    left: 0; bottom: 43px; right: 0;
+    margin: 0 auto; 
+    width: 2px; height: 16px;
+    background-color: white;
+}
+.RRTime .RR_timelineee .itm.jstlitem.slick-current::before {
+    bottom: 40px;
+    height: 62px;
+}
+
+.RRimgslider {
+    width: 100%; 
+    padding: 80px 0;
+    overflow-x: hidden;
+    background-color: white;
+}
+
+.RRimgslider .pngtt {
+    width: 676px;
+    margin-bottom: 80px;
+}
+.RRimgslider .pngtt img {
+    width: 100%;
+}
+
+.RRimgslider .js__imgslider-big .slick-list {
+    width: 100%;
+    padding-left: calc((100% - 1280px)/2);
+}
+
+.RRimgslider .js__imgslider-big .itm {
+    margin-right: 50px;
+}
+.RRimgslider .js__imgslider-big .itm img {
+    width: 100%;
+}
+
+.RRimgslider .js__imgslider-sml {
+    width: 100%; max-width: 1280px;
+    margin: 60px auto ;
+}   
+
+.RRimgslider .js__imgslider-sml .itm.slick-current { 
+    color: #000;
+    
+}
+
+.RRimgslider .js__imgslider-sml .itm.slick-current::before {
+    background-color: #000;
+}
+
+.RRimgslider .js__imgslider-sml .itm {
+    position: relative;
+    width: 100%;
+    padding-right: 20px;
+    padding-top: 20px;
+    color: #929292;
+    transition: all 0.2s linear;
+    cursor: pointer;
+}
+.RRimgslider .js__imgslider-sml .itm:hover {
+    color: #000;
+}
+
+.RRimgslider .js__imgslider-sml .itm:hover::before {
+    background-color: #000;
+}
+
+.RRimgslider .js__imgslider-sml .itm::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; 
+    width: calc(100% - 20px) ; height: 4px;
+    border-radius: 2px;
+    background-color: #929292;
+    transition: all 0.2s linear;
+}
+
+.RRformblock {
+    position: relative;
+    width: 100%; height: auto;
+    padding: 120px 0;
+}
+
+.RRformblock .RRformblock__form {
+    margin: auto;
+    padding: 40px;
+    width: 600px; height: auto;
+}
+
+.RRformblock .RRformblock__form .outtt {
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 27px;
+    font-weight: bold;
+    color: white;
+}
+.RRformblock .RRformblock__form .carditm {
+    padding: 40px;
+    background-color: white;
+    border-radius: 20px; 
+}
+
+.RRformblock .RRformblock__form .carditm .txt {
+    margin-bottom: 20px;
+    text-align: center;
+    color: black;
+}
+.RRformblock .RRformblock__form .carditm .txt .tt {
+    font-size: 27px;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+.RRformblock .RRformblock__form form .inputblock {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.RRformblock .RRformblock__form form .inputblock.-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.RRformblock .RRformblock__form form .inputblock.-flex .inputbox {
+    width: calc((100% - 30px)/2);
+}
+
+.RRformblock .RRformblock__form form .inputblock.-submit {
+    margin-top: 20px;
+}
+
+.RRformblock .RRformblock__form form .inputblock .inputbox label {
+    position: relative;
+    width: 100%;
+    margin-bottom: 3px;
+    font-weight: bold;
+    color: #000;
+}
+.RRformblock .RRformblock__form form .inputblock .inputbox label::after {
+    content: '必填';
+    position: absolute;
+    font-weight: 400;
+    right: 0; top: 0;
+    color: #929292;
+}
+.RRformblock .RRformblock__form form .inputblock .inputbox input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 4px;
+}
+
+.RRformblock .RRformblock__form form .inputblock .inputbox input[type="submit"] {
+    color: white;
+    background-color: #000;
+    cursor: pointer;
+}
+
+.RRformblock .RRformblock__form form .agreeblock {
+    display: flex;
+    color: #000;
+}
+.RRformblock .RRformblock__form form .agreeblock input {
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.RRformblock .RRformblock__form .socielbloc {
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    margin: 40px auto 0 auto;
+}
+
+.RRformblock .RRformblock__form .socielbloc .itm {
+    width: 48px; height: 48px;
+}
+
+.RRfooter {
+    width: 100%; 
+    padding-top: 100px;
+    background-color: white;
+}
+
+@media screen and (max-width: 1440px){
+
+
+    .RR_inner {
+        max-width: 980px;
+    }
+
+    #RRheader,
+    #RRheader .menu,
+    #RRheader::after {
+        height: 60px;
+    }
+
+    #RRheader .menu a {
+        padding: 17.5px 0;
+    }
+
+    #RRheader .menu li:last-child  a{
+        padding: 0;
+    }
+
+    .RRmainvision .__pngtxt {
+        height: 320px;
+    }
+
+    .RRmainvision .__pngtxt .img .imgtxt {
+        width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .RRTime .pngtt {
+        width: 520px;
+    }
+    .RRimgslider .pngtt {
+        width: 476px;
+    }
+
+    .RRimgslider .js__imgslider-big .slick-list {
+        padding-left: calc((100% - 980px)/2);
+    }
+    .RRimgslider .js__imgslider-sml {
+        max-width: 980px;
+    }
+
+
+}
+
+@media screen and (max-width: 1366px){
+
+    .RRformblock .RRformblock__form .outtt,
+    .RRmainvision .__pngtxt .img .sub, 
+    .RRmainvision .__pngtxt .txt .tt,
+    .RRkol .kols .itm .txt .tt,
+    .RRTime .timeslider .itm .tt,
+    .RRformblock .RRformblock__form .carditm .txt .tt
+    {
+        font-size: 18px;
+    }
+
+    .RRkol .kols .itm .txt .tg,
+    .RRTime .timeslider .itm .tg,
+    .RRTime .RR_timelineee .itm,
+    .RRformblock .RRformblock__form form .agreeblock .agreetxt,
+    .RRformblock .RRformblock__form .carditm .txt .tg  {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1180px){
+
+    .RR_inner,
+    .RRimgslider .js__imgslider-sml {
+        max-width: 800px;
+    }
+    .RRimgslider .js__imgslider-big .slick-list {
+        padding-left: calc((100% - 800px)/2)
+    }
+
+    .RRmainvision .__pngtxt .img .imgtxt {
+        width: 350px;
+    }
+
+    .RRmainvision .__pngtxt {
+        height: 290px;
+    }
+
+
+
+    .RRkol .pngtt {
+        width: 390px;
+    }
+    .RRTime .pngtt {
+        width: 450px;
+    }
+    .RRimgslider .pngtt {
+        width: 376px;
+    }
+
+    
+ }
+
+@media screen and (max-width: 1024px){
+
+	#RRheader .menu {
+		background-image: radial-gradient(ellipse at left top, #16193C, #000000);
+		transform: translateY(-100%);
+		transition: all 0.46s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+	#RRheader .menu, #RRheader.isScroll .menu {
+		left: 0; top: 0;
+		z-index: 51;
+		width: 100%; height: 100vh;
+		
+	}
+
+	.isMenuOpen #RRheader .menu {
+		transform: translateY(0);
+	}
+
+    header .RRheaderlogo {
+        left: 20px;
+    }
+
+	header .menu a, 
+	header.isScroll .menu a {
+		height: 50px;
+	}
+
+	header .menu ul li{
+		margin: 0;
+	}
+
+	header .menu li a {
+		opacity: 0;
+		transform: translateY(-45px);
+	}
+	.isMenuOpen header .menu li a{
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+    header .menu ul li:last-child {
+        margin-top: 14px;
+    }
+
+	header .menu li:nth-child(1) a {
+		transition: all 0.49s 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	}
+	header .menu li:nth-child(2) a {
+		transition: all 0.45s 0.21s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	}
+	header .menu li:nth-child(3) a {
+		transition: all 0.4s 0.17s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	}
+	header .menu li:nth-child(4) a {
+		transition: all 0.35s 0.13s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	}
+	header .menu li:nth-child(5) a {
+		transition: all 0.3s 0.1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	}
+	.isMenuOpen header .menu li:nth-child(1) a {
+		transition: all 0.4s 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	}
+	.isMenuOpen header .menu li:nth-child(2) a {
+		transition: all 0.45s 0.33s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+	}
+	.isMenuOpen header .menu li:nth-child(3) a {
+		transition: all 0.5s 0.36s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+	}
+	.isMenuOpen header .menu li:nth-child(4) a {
+		transition: all 0.55s 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+	}
+	.isMenuOpen header .menu li:nth-child(5) a {
+		transition: all 0.59s 0.44s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+	}
+
+	header .menu ul {
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100%; height: 100%;
+	}
+
+
+
+    .RRformblock .RRformblock__form .outtt, 
+    .RRmainvision .__pngtxt .img .sub, 
+    .RRmainvision .__pngtxt .txt .tt, 
+    .RRkol .kols .itm .txt .tt, .RRTime .timeslider .itm .tt, 
+    .RRformblock .RRformblock__form .carditm .txt .tt {
+        font-size: 16px;
+    }
+
+    .RRTime .RR_timelineee .itm {
+        font-size: 13px;
+    }
+
+    .RRmainvision .__pngtxt .img .imgtxt {
+        width: 250px;
+    }
+
+    .RR_inner, .RRimgslider .js__imgslider-sml {
+        max-width: 700px;
+    }
+
+    .RRimgslider .js__imgslider-big .slick-list {
+        padding-left: calc((100% - 700px)/2)
+    }
+
+}
+
+@media screen and (max-width: 860px){
+
+    .RR_inner, .RRimgslider .js__imgslider-sml {
+        max-width: 500px;
+    }
+
+    .RRmainvision .__pngtxt {
+        max-width: 500px;
+        width: 90%;
+        transform: translateY(20px);
+    }
+
+    .RRimgslider {
+        width: 100%;
+    }
+    
+    .RRimgslider .js__imgslider-big  {
+        width: 100%;
+        max-width: 500px;
+        margin: auto;
+    }
+
+    .RRimgslider .js__imgslider-big .itm {
+        margin-right: 0;
+    }
+
+    .RRimgslider .js__imgslider-big .slick-list {
+        padding-left: 0;
+    }
+
+    .RRimgslider .js__imgslider-sml .itm {
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: center;
+    }
+
+    .RRimgslider .js__imgslider-sml .itm::before {
+        left: 0; right: 0; 
+        margin: auto;
+    }
+
+    .RRkol .kols {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .RRkol .kols .itm {
+        width: 100%;
+    }
+
+    .RRkol::before {
+        right: -80px;
+        top: -100px;
+        width: calc(943px*.2);
+        height: calc(1222px*.2);
+    }
+    .RRkol::after {
+        left: -150px;
+        bottom: -300px;
+        width: calc(588px*.5);
+        height: calc(776px*.5);
+    }
+
+    .RRsteup .cont {
+        flex-direction: column;
+
+    }
+
+    .RRsteup .cont .img, .RRsteup .cont .txt {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .RRsteup .cont .txt .bx {
+        max-width: 100%; width: 100%;
+    }
+
+    .RRTime .timeslider,
+    .RRformblock .RRformblock__form {
+        width: 100%;
+    }
+
+    .drawtxt {
+        margin-bottom: 40px
+    }
+
+}
+
+@media screen and (max-width: 700px){
+
+}   
+
+@media screen and (max-width: 550px){
+    .RRmainvision .__pngtxt {
+        max-width: 300px;
+        
+        
+    }
+
+    .RRTime .RR_timelineee .itm {
+        font-size: 12px;
+    }
+
+    .RRkol .pngtt {
+        max-width: 380px;
+        width: 90%;
+    }
+
+    .RRTime .pngtt {
+        max-width: 400px;
+        width: 90%;
+    }
+
+    .RRimgslider .pngtt {
+        max-width: 350px;
+        width: 90%;
+    }
+
+    .RRTime .timeslider {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .RR_inner, .RRimgslider .js__imgslider-sml {
+        width: 90%;
+    }
+    .RRimgslider .js__imgslider-big {
+        width: 90%;
+    }
+
+    .RRformblock .RRformblock__form form .inputblock.-flex {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .RRformblock .RRformblock__form form .inputblock.-flex .inputbox {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .RRformblock .RRformblock__form form .inputblock.-flex .inputbox:last-child {
+        margin-bottom: 0;
+    } 
+ }
